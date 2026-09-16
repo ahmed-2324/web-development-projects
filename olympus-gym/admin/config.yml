@@ -1,1 +1,41 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "offer"
+    label: "Special Offer"
+    files:
+      - file: "data/offer.json"
+        label: "Special Offer Content"
+        name: "offer"
+        fields:
+          - { label: "Offer Title", name: "title", widget: "string" }
+          - { label: "Current Price (Membership + Monthly Fee)", name: "current_price", widget: "string" }
+          - { label: "Regular Price (crossed out)", name: "regular_price", widget: "string" }
+          - { label: "Save Amount Text", name: "save_amount", widget: "string" }
+          - { label: "Package 1 Label", name: "package1_label", widget: "string" }
+          - { label: "Package 1 Price", name: "package1_price", widget: "string" }
+          - { label: "Package 2 Label", name: "package2_label", widget: "string" }
+          - { label: "Package 2 Price", name: "package2_price", widget: "string" }
+          - { label: "Package 3 Label", name: "package3_label", widget: "string" }
+          - { label: "Package 3 Price", name: "package3_price", widget: "string" }
+
+  - name: "packages"
+    label: "Regular Packages"
+    files:
+      - file: "data/packages.json"
+        label: "Regular Packages Content"
+        name: "packages"
+        fields:
+          - { label: "Admission + Monthly Fee", name: "admission_fee", widget: "string" }
+          - { label: "Plan 1 Name", name: "plan1_name", widget: "string" }
+          - { label: "Plan 1 Price", name: "plan1_price", widget: "string" }
+          - { label: "Plan 2 Name", name: "plan2_name", widget: "string" }
+          - { label: "Plan 2 Price", name: "plan2_price", widget: "string" }
+          - { label: "Plan 3 Name", name: "plan3_name", widget: "string" }
+          - { label: "Plan 3 Price", name: "plan3_price", widget: "string" }
 
