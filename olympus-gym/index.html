@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">  
+<html lang="en">
 
 <head>
     <meta charset="UTF-8" />
@@ -2063,7 +2063,46 @@
         // Footer year
         document.getElementById('year').textContent = new Date().getFullYear();
     </script>
+
+    <!-- Netlify Identity (needed so invite/login links work on this page) -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script>
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {});
+        }
+    </script>
+
+    <!-- Load editable content set by the owner via /admin -->
+    <script>
+        fetch('/data/offer.json')
+            .then(r => r.json())
+            .then(d => {
+                document.getElementById('offerTitle').textContent = d.title;
+                document.getElementById('offerCurrentPrice').textContent = d.current_price;
+                document.getElementById('offerRegularPrice').textContent = d.regular_price;
+                document.getElementById('offerSaveAmount').textContent = d.save_amount;
+                document.getElementById('offerPkg1Label').textContent = d.package1_label;
+                document.getElementById('offerPkg1Price').textContent = d.package1_price;
+                document.getElementById('offerPkg2Label').textContent = d.package2_label;
+                document.getElementById('offerPkg2Price').textContent = d.package2_price;
+                document.getElementById('offerPkg3Label').textContent = d.package3_label;
+                document.getElementById('offerPkg3Price').textContent = d.package3_price;
+            })
+            .catch(e => console.error('offer.json load failed', e));
+
+        fetch('/data/packages.json')
+            .then(r => r.json())
+            .then(d => {
+                document.getElementById('regAdmissionFee').textContent = d.admission_fee;
+                document.getElementById('plan1Name').textContent = d.plan1_name;
+                document.getElementById('plan1Price').textContent = d.plan1_price;
+                document.getElementById('plan2Name').textContent = d.plan2_name;
+                document.getElementById('plan2Price').textContent = d.plan2_price;
+                document.getElementById('plan3Name').textContent = d.plan3_name;
+                document.getElementById('plan3Price').textContent = d.plan3_price;
+            })
+            .catch(e => console.error('packages.json load failed', e));
+    </script>
 </body>
 
 </html>
-
