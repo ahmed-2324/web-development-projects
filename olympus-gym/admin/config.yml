@@ -2,14 +2,14 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "uploads"
+media_folder: "olympus-gym/uploads"
 public_folder: "/uploads"
 
 collections:
   - name: "offer"
     label: "Special Offer"
     files:
-      - file: "data/offer.json"
+      - file: "olympus-gym/data/offer.json"
         label: "Special Offer Content"
         name: "offer"
         fields:
@@ -27,7 +27,7 @@ collections:
   - name: "packages"
     label: "Regular Packages"
     files:
-      - file: "data/packages.json"
+      - file: "olympus-gym/data/packages.json"
         label: "Regular Packages Content"
         name: "packages"
         fields:
@@ -38,4 +38,3 @@ collections:
           - { label: "Plan 2 Price", name: "plan2_price", widget: "string" }
           - { label: "Plan 3 Name", name: "plan3_name", widget: "string" }
           - { label: "Plan 3 Price", name: "plan3_price", widget: "string" }
-
