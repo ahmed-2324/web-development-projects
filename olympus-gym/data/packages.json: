@@ -1,1 +1,9 @@
-
+{
+  "admission_fee": "৳2,800/-",
+  "plan1_name": "3 Months",
+  "plan1_price": "৳3,500/-",
+  "plan2_name": "6 Months",
+  "plan2_price": "৳5,000/-",
+  "plan3_name": "12 Months",
+  "plan3_price": "৳8,500/-"
+}
