@@ -1,12 +1,12 @@
 {
-  "title": "September Special",
+  "package1_label": "3+1 = 4 Months",
+  "package2_label": "6+1 = 7 Months",
+  "package3_label": "12 Months",
   "current_price": "৳1,500/-",
   "regular_price": "৳2,800/-",
-  "save_amount": "SAVE ৳1,300/-",
-  "package1_label": "3+1 = 4 Months",
   "package1_price": "৳3,000/-",
-  "package2_label": "6+1 = 7 Months",
   "package2_price": "৳4,500/-",
-  "package3_label": "12 Months",
-  "package3_price": "৳6,999/-"
+  "package3_price": "৳6,999/-",
+  "title": "October Special",
+  "save_amount": "SAVE ৳1,300/-"
 }
